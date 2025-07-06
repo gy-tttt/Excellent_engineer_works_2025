@@ -10,12 +10,12 @@ int main() {
   
     FILE *input_file = fopen("input.txt", "w");
     if (input_file == NULL) {
-        perror("ÎŞ·¨´ò¿ªinput.txtÎÄ¼ş");
+        perror("æ— æ³•æ‰“å¼€input.txtæ–‡ä»¶");
         return 1;
     }
     
     uint32_t numbers[5];
-    printf("Éú³ÉµÄËæ»úÊı: ");
+    printf("ç”Ÿæˆçš„éšæœºæ•°: ");
     for (int i = 0; i < 5; i++) {
         numbers[i] = rand();
         fprintf(input_file, i == 0 ? "%u" : " %u", numbers[i]);
@@ -27,7 +27,7 @@ int main() {
  
     input_file = fopen("input.txt", "r");
     if (input_file == NULL) {
-        perror("ÎŞ·¨´ò¿ªinput.txtÎÄ¼ş");
+        perror("æ— æ³•æ‰“å¼€input.txtæ–‡ä»¶");
         return 1;
     }
     
@@ -43,13 +43,13 @@ int main() {
  
     FILE *output_file = fopen("output.txt", "w");
     if (output_file == NULL) {
-        perror("ÎŞ·¨´ò¿ªoutput.txtÎÄ¼ş");
+        perror("æ— æ³•æ‰“å¼€output.txtæ–‡ä»¶");
         return 1;
     }
     fprintf(output_file, "%f", average);
     fclose(output_file);
     
-    printf("¼ÆËãµÄÆ½¾ùÖµ: %f\n", average);
+    printf("è®¡ç®—çš„å¹³å‡å€¼: %f\n", average);
     
     return 0;
 }
